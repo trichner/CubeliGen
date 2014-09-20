@@ -27,13 +27,14 @@ for special flags. (4*8bit-5*5bit = 32bit-25bit = 7bit)
 
 ### Intensity encoding
 The 7th byte is used for intensity encoding (the leftover 7bits from plane 2)
+```
 full -> 0x00
 lvl4 -> 0x01
 lvl3 -> 0x02
 lvl2 -> 0x04
 lvl1 -> 0x08
 off  -> 0x10
-
+```
 Note that the first bit of this byte still encodes an LED.
 
 ### Special Flags
