@@ -14,8 +14,8 @@ This is the file contents of a *.cb5, containing one frame with only 1 LED is on
 was painfully reverse-engineered, not sure if correct...
 
 ### LED/planes encoding
-For every plane 4 bytes are used, therefore the last 7 bits of every plane are used
-for special flags. (`4*8bit-5*5bit = 32bit-25bit = 7bit`)
+For every plane 4 bytes are used, therefore the last 7 bits of every plane are unused for LED
+state storage. Instead they are used for flags and intensity. (`4*8bit-5*5bit = 32bit-25bit = 7bit`)
 
 ```
 00 00 00 01 // 1. plane, the last bit flags this as a 'scene start' frame
