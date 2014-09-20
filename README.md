@@ -15,7 +15,7 @@ was painfully reverse-engineered, not sure if correct...
 
 ### LED/planes encoding
 For every plane 4 bytes are used, therefore the last 7 bits of every plane are used
-for special flags. (4*8bit-5*5bit = 32bit-25bit = 7bit)
+for special flags. (`4*8bit-5*5bit = 32bit-25bit = 7bit`)
 
 ```
 00 00 00 01 // 1. plane, the last bit flags this as a 'scene start' frame
@@ -40,9 +40,9 @@ Note that the first bit of this byte still encodes an LED.
 ### Special Flags
 Flag | Description | Position (relative to frame start)
 -----|-------------|----------
-`scene_start` | flags the start of a scene | LSB of byte 4 (last bit of first plane)
-`scene_end`   | flags the end of a scene | 2nd LSB of byte 20 (2nd last bit)
-`final_frame` | flags the absolute last frame | LSB of byte 20 (last bit)
+`scene_start` | start of a scene | LSB of byte 4 (last bit of first plane)
+`scene_end`   | end of a scene | 2nd LSB of byte 20 (2nd last bit)
+`final_frame` | the absolute last frame | LSB of byte 20 (last bit)
 
 
 
