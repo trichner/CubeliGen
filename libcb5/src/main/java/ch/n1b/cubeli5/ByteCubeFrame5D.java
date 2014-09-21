@@ -27,6 +27,12 @@ public class ByteCubeFrame5D {
     public void set(int x, int y, int z, boolean on){
         cube5[z][y][x] = on;
     }
+    public void set(boolean[][][] cube5){
+        this.cube5 = cube5;
+    }
+    public boolean get(int x,int y,int z){
+        return cube5[z][y][x];
+    }
 
     private ByteBuffer buildPlane(boolean[][] plane){
         // 4 bytes per plane
