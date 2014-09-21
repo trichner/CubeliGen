@@ -46,6 +46,11 @@ Flag | Description | Position (relative to frame start)
 `scene_end`   | end of a scene | 2nd LSB of byte 20 (2nd last bit)
 `final_frame` | the absolute last frame | LSB of byte 20 (last bit)
 
+##The Cellular Automaton
+
+The module CellCubeli provides an easy way to generate frames for an cellular automaton (e.g. Game of Life in 3D).
+Only directly adjectant cells are considered in the current version (i.e. 6 neighbors) instead of 26.
+You can easily instantiate your own CellularAutomaton, initialize it with a state and set the rules.
 
 
 
